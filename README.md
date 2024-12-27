@@ -1,5 +1,5 @@
 # Containerized Github Action Runner
-Scripts providing a containerized ephemeral action runner for the `mattbucknall-oss` GitHub organization.
+Scripts providing a containerized ephemeral action runner for GitHub organization.
 
 A runner container performs the following actions:
 
