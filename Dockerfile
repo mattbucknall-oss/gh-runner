@@ -21,6 +21,8 @@ RUN apt-get update && apt-get install -y \
     git \
     jq \
     ninja-build \
+    pbzip2 \
+    pigz \
     sudo \
     tar \
     && apt-get clean \
