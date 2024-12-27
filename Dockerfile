@@ -40,8 +40,6 @@ RUN apt-get update && apt-get install -y \
     libhidapi-dev \
     libmpc-dev \
     libmpfr-dev \
-    libncursesw5 \
-    libncursesw5-dev \
     libpixman-1-dev \
     libslirp-dev \
     libssl-dev \
@@ -49,7 +47,6 @@ RUN apt-get update && apt-get install -y \
     libtool \
     locales \
     m4 \
-    netcat \
     ninja-build \
     pkg-config \
     patchutils \
