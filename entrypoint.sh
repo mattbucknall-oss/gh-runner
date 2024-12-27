@@ -42,4 +42,4 @@ cleanup() {
 trap cleanup EXIT
 
 # Listen for job in clean environment (container terminates once job completes)
-sudo -u ghr -i ./run.sh
+sudo -u ghr -i ./run.sh --once
