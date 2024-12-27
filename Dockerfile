@@ -13,25 +13,58 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
+    apt-utils \
     autoconf \
     automake \
+    autotools-dev \
+    bash-completion \
+    bc \
+    bison \
     build-essential \
-    cmake \
+    ca-certificates \
     curl \
+    debhelper \
     doxygen \
-    gcc \
+    flex \
+    gawk \
     g++ \
+    gdb \
     git \
     git-lfs \
+    gperf \
     graphviz \
-    jq \
+    libexpat-dev \
+    libfdt-dev \
+    libglib2.0-dev \
+    libgmp-dev \
+    libhidapi-dev \
+    libmpc-dev \
+    libmpfr-dev \
+    libncursesw5 \
+    libncursesw5-dev \
+    libpixman-1-dev \
+    libslirp-dev \
+    libssl-dev \
+    libusb-1.0-0-dev \
     libtool \
+    locales \
+    m4 \
+    netcat \
     ninja-build \
+    pkg-config \
+    patchutils \
     pbzip2 \
     pigz \
+    python3 \
+    python3-pip \
+    python3.10-venv \
+    ssh \
     sudo \
-    tar \
+    telnet \
     texinfo \
+    wget \
+    xz-utils \
+    zlib1g-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
