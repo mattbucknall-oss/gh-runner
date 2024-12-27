@@ -1,5 +1,5 @@
 # Use Ubuntu base image
-FROM ubuntu:focal
+FROM ubuntu:oracular
 
 # Suppress interaction during setup
 ENV DEBIAN_FRONTEND=noninteractive
@@ -13,19 +13,25 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
+    autoconf \
+    automake \
     build-essential \
     cmake \
     curl \
+    doxygen \
     gcc \
     g++ \
     git \
     git-lfs \
+    graphviz \
     jq \
+    libtool \
     ninja-build \
     pbzip2 \
     pigz \
     sudo \
     tar \
+    texinfo \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
