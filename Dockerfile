@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     git \
+    git-lfs \
     jq \
     ninja-build \
     pbzip2 \
