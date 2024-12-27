@@ -11,7 +11,7 @@ cleanup() {
 trap cleanup SIGINT SIGTERM
 
 while true; do
-  CONTAINER_ID=$(docker run --rm --env-file env.list -d gh-runner)
+  CONTAINER_ID=$(docker run --rm --env-file /etc/gh-runner-env.list -d gh-runner)
   docker wait "$CONTAINER_ID"
   sleep 1
 done

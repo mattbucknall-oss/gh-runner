@@ -12,7 +12,7 @@ A runner container performs the following actions:
 A systemd service is provided to start a new clean container every time the previous instance terminates.
 
 ## NOTE:
-An `env.list` file must be created in this directory containing:
+An `/etc/gh-runner-env.list` file must be created containing:
 
 ```
 GH_ORG=<Name of GitHub organization>
