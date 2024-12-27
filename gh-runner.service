@@ -4,7 +4,7 @@ After=network.target docker.service
 Requires=docker.service
 
 [Service]
-ExecStart=/usr/local/bin/run.sh
+ExecStart=/usr/local/bin/gh-runner.sh
 Restart=always
 RestartSec=5
 StandardOutput=journal
