@@ -9,7 +9,7 @@ A runner container performs the following actions:
 - Removes runner from GitHub organization.
 - Terminates.
 
-A systemd service is provided to start a new clean container ever time the previous instance terminates.
+A systemd service is provided to start a new clean container every time the previous instance terminates.
 
 ## NOTE:
 An `env.list` file must be created in this directory containing:
