@@ -77,9 +77,15 @@ WORKDIR /home/ghr/
 # Download and extract GH runner, install dependencies
 RUN curl -o actions-runner-linux.tar.gz -L \
     https://github.com/actions/runner/releases/download/v2.321.0/actions-runner-linux-x64-2.321.0.tar.gz \
-    && tar -xzf actions-runner-linux.tar.gz \
+    && tar -xf actions-runner-linux.tar.gz \
     && rm actions-runner-linux.tar.gz \
     && ./bin/installdependencies.sh
+
+# Download and extract riscv32-unknown-elf toolchain
+RUN curl -o riscv32-unknown-elf.tar.bz2 -L \
+    https://github.com/mattbucknall-oss/rv32im-gnu-toolchain/releases/download/release-20241228002103/riscv32-unknown-elf-20241228002103.tar.bz2 \
+    && tar -xf riscv32-unknown-elf.tar.bz2 \
+    && rm riscv32-unknown-elf.tar.bz2
 
 # Assign ownership of everything to ghr user
 RUN chown ghr:ghr -R .
