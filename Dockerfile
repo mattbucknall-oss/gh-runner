@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y \
     git-lfs \
     gperf \
     graphviz \
+    jq \
     libexpat-dev \
     libfdt-dev \
     libglib2.0-dev \
