@@ -68,8 +68,9 @@ RUN apt-get update && apt-get install -y \
 # Add non-root user and give it ownership of runner directory
 RUN useradd -m ghr
 
-# Add ghr to the sudoers file
-RUN echo "ghr ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+# Add ghr to the sudoers file and allow PATH environment variable to be passed
+RUN echo "ghr ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && echo "Defaults env_keep += \"PATH\"" >> /etc/sudoers
 
 # Set working directory
 WORKDIR /home/ghr/
@@ -92,3 +93,6 @@ RUN chown ghr:ghr -R .
 
 # Switch to non-root user
 USER ghr
+
+# Add risc32-unknown-elf toolchain to path
+ENV PATH="/home/ghr/rv32im-gnu-toolchain/bin:${PATH}"
